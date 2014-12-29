@@ -1,0 +1,5 @@
+{% extends "admin/login.html" %}
+
+{% block content %}
+<a href="{% url 'socialauth_begin' 'google-oauth2' %}">Login with Google</a>
+{% endblock %}

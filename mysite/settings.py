@@ -84,8 +84,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/private/'
+LOGIN_URL = '/login-form/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_ERROR_URL = '/login-error/'
 SOCIAL_AUTH_DEFAULT_USERNAME = 'new_social_auth_user'
 SOCIAL_AUTH_UID_LENGTH = 16
@@ -93,14 +93,12 @@ SOCIAL_AUTH_ASSOCIATION_HANDLE_LENGTH = 16
 SOCIAL_AUTH_NONCE_SERVER_URL_LENGTH = 16
 SOCIAL_AUTH_ASSOCIATION_SERVER_URL_LENGTH = 16
 SOCIAL_AUTH_ASSOCIATION_HANDLE_LENGTH = 16
-SOCIAL_AUTH_ENABLED_BACKENDS = ('google', 'github')
+SOCIAL_AUTH_ENABLED_BACKENDS = ('google')
 
-GITHUB_API_KEY = ''
-GITHUB_API_SECRET = ''
  
-GOOGLE_OAUTH2_CLIENT_ID = ''
-GOOGLE_OAUTH2_CLIENT_SECRET = ''
-
+GOOGLE_OAUTH2_CLIENT_ID = '288705357003-uj89qg92no2v2da5dv9i4d9rt0kan59n.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET = 'l4PnuiRqVCjOVR45SXuWAsGP'
+SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -130,7 +128,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/

@@ -7,10 +7,8 @@ from django.template.context import RequestContext
 def index(request):
     return HttpResponse("Hello, world. You're at the Medical Info index.")
 	
-
-
-def base(request):
+def home(request):
    context = RequestContext(request,
                            {'user': request.user})
-   return render_to_response('medical/base.html',
+   return render_to_response('templates/admin/home.html',
                              context_instance=context)

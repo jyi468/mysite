@@ -30,8 +30,8 @@ urlpatterns = patterns('',
 	url(r'^', include(router.urls)),
 	url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 	url(r'', include('social_auth.urls')),
-    url(r'^login/$', RedirectView.as_view(url='/login/github')),
-    url(r'^base/$', 'medical.views.base'),
+    url(r'^login', 'medical.views.home', name='home'),
+    url('', include('django.contrib.auth.urls', namespace='auth')),
 	
 	
 )
